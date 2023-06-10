@@ -1,18 +1,32 @@
+
 <div style=" margin: auto; width: 50%;">
-  <button (click)="exportexcel()">Export to Excel</button>
- 
-  <table id="excel-table">
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Username</th>
-      <th>Email</th>
-    </tr>
-    <tr *ngFor="let item of userList">
-      <td>{{item.id}}</td>
-      <td>{{item.name}}</td>
-      <td>{{item.username}}</td>
-      <td>{{item.email}}</td>
-    </tr>
-  </table>
+  
+  <div class="card">
+    <div class="card-header" >
+
+      <button (click)="exportexcel()" class="btn btn-primary">Export to Excel </button>
+    </div>
+    <table id="excel-table"></table>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <tr *ngFor="let item of userList">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.email}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
